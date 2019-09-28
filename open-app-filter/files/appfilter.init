@@ -2,10 +2,12 @@
 
 START=96
 start() {
+	insmod oaf
 	gen_class.sh /etc/appfilter/feature.cfg
 	appfilter.sh
 }
 
 stop() {
+	rmmod oaf
 	echo "stop appfilter"	
 }
