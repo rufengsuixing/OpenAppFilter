@@ -21,7 +21,7 @@ m = Map("appfilter",
 	translate(""))
 	
 s = m:section(TypedSection, "global", translate("Basic Settings"))
-s:option(Flag, "enable", translate("Enable App Filter"),translate(""))
+s:option(Flag, "enable", translate("Enable App Filter"),translate("please close Flow Offload"))
 s.anonymous = true
 
 
