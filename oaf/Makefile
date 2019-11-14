@@ -15,7 +15,6 @@ define KernelPackage/oaf
   TITLE:=open app filter kernel module
   FILES:=$(PKG_BUILD_DIR)/oaf.ko 
   KCONFIG:=
-  AUTOLOAD:=$(call AutoLoad,0,$(PKG_AUTOLOAD))
 endef
 
 define KernelPackage/oaf/description

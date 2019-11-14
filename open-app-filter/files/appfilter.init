@@ -1,11 +1,20 @@
 #!/bin/sh /etc/rc.common
 
 START=96
+
 start() {
-	gen_class.sh /etc/appfilter/feature.cfg
-	appfilter.sh
+	local enabled
+	config_load 'appfilter'
+	config_get_bool enabled 'global' 'enable' 0
+	if [ "$enabled" == "1" ] ;then
+		insmod oaf
+		gen_class.sh /etc/appfilter/feature.cfg
+		appfilter.sh
+		logger appfilter "enable appfilter"
+	fi
 }
 
 stop() {
-	echo "stop appfilter"	
+	rmmod oaf
+	logger appfilter "stop appfilter"	
 }

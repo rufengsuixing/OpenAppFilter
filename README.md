@@ -39,3 +39,6 @@ OpenWrt 19.07、 LEDE等主流版本
 - 微信公众号: OpenWrt
 
 - 技术交流QQ群: 943396288
+
+
+forked from destan19/OpenAppFilter
